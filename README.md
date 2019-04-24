@@ -2,7 +2,7 @@
 News api Intergration UI.
 
 
-Demo Url: http://elfin-history.surge.sh
+Demo Url: http://purple-judge.surge.sh/
 
 ## Development server
 
