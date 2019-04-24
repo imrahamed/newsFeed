@@ -21,6 +21,7 @@ export class DataService {
     if (!(model.sources.length)) {
       delete model.sources;
     }
+    Object.keys(model).forEach((key) => (model[key] == null) && delete model[key]);
     const params = new HttpParams({
       fromObject: model
     });
