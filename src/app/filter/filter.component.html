@@ -1,0 +1,25 @@
+<div class="filterWrapper" nz-row>
+  <div nz-col nzSpan="5">
+      <nz-select (ngModelChange)='countryChanged($event)' class="filterFileds" [(ngModel)]="model.country" nzAllowClear nzPlaceHolder="Choose Country">
+          <nz-option nzValue="us" nzLabel="USA"></nz-option>
+          <nz-option nzValue="in" nzLabel="India"></nz-option>
+      </nz-select>
+  </div>
+  <div nz-col nzSpan="5">
+      <input class="filterFileds" nz-input placeholder="Search" [(ngModel)]="model.q" />
+  </div>
+  <div nz-col nzSpan="5">
+    <nz-select class="filterFileds" nzMode="multiple"
+      nzPlaceHolder="Please select Source" [(ngModel)]="model.sources">
+      <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.name" [nzValue]="option.id"></nz-option>
+    </nz-select>
+  </div>
+  <div nz-col nzSpan="5">
+      <nz-select class="filterFileds" [(ngModel)]="model.category" nzAllowClear nzPlaceHolder="Choose category">
+          <nz-option *ngFor="let option of categories" nzValue="{{option}}" nzLabel="{{option}}"></nz-option>
+      </nz-select>
+  </div>
+  <div nz-col nzSpan="4">
+    <button (click)='submitquery()' nz-button nzType="primary">Submit</button>
+  </div>
+</div>

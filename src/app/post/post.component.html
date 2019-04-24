@@ -1,0 +1,13 @@
+<div class="dataWrapper">
+    <div class="filterWrapper" nz-row>
+        <div *ngFor="let article of data" nz-col nzSpan="24">
+            <nz-card nzTitle="{{article.title}}" >
+                <p>{{article.description}}</p>
+                <p>{{article.content}}</p>
+                <p>{{article.author}}</p>
+              </nz-card>
+        </div>
+        
+    </div>
+  
+</div>
