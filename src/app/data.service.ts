@@ -18,7 +18,7 @@ export class DataService {
 
   sendSource(model: any) {
     console.log(model);
-    if (!(model.sources.length)) {
+    if (!(model.sources && model.sources.length)) {
       delete model.sources;
     }
     Object.keys(model).forEach((key) => (model[key] == null) && delete model[key]);
